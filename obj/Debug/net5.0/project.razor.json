@@ -14387,7 +14387,7 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 2147483646
+    "CSharpLanguageVersion": 900
   },
   "RootNamespace": "Commander",
   "Documents": [],
