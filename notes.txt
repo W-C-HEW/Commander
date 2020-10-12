@@ -1,0 +1,26 @@
+-setup DB connection-
+1. in appsettings.json
+"ConnectionStrings":
+  {
+    "CommanderConnection": "Server=ANDROID-1FC58DB; initial Catalog=CommanderDB; User ID=CommanderAPI; Password=password;"
+  }
+
+2. Register service in startup.cs
+ services.AddDbContext<*CommanderContext*>(opt => opt.UseSqlServer
+                (Configuration.GetConnectionString(*"CommanderConnection"*)));
+
+2. get packages from nuget
+-Microsoft.EntityFrameworkCore
+-Microsoft.EntityFrameworkCore.Design
+-Microsoft.EntityFrameworkCore.SqlServer
+
+3.dotnet ef migrations add *migrationName*
+
+-removing migration-
+dotnet ef migrations remove
+
+-data annotation-
+*used in model
+*[Key] = primary Key
+*[Required] = not nullable
+*[MaxLength] = maximum length
