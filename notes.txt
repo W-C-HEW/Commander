@@ -31,3 +31,7 @@ dotnet ef migrations remove
 5. Using SQL
 -return _context.Commands.ToList(); //get all
 -return _context.Commands.FirstOrDefault(p => p.Id == id); //get by Id
+
+6. DTOs
+* to control what data to return to client
+- auto mapper (Optional: automatically map dto to model) 
