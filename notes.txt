@@ -35,3 +35,8 @@ dotnet ef migrations remove
 6. DTOs
 * to control what data to return to client
 - auto mapper (Optional: automatically map dto to model) 
+- in startup : services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+- create a profile
+- CreateMap<modelName, dtoName>(); in profile
+- require IMapper in controller constructor
+- _mapper.Map<DtoName>(ModelName) to get mapped DTO
