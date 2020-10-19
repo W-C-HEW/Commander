@@ -40,3 +40,17 @@ dotnet ef migrations remove
 - CreateMap<modelName, dtoName>(); in profile
 - require IMapper in controller constructor
 - _mapper.Map<DtoName>(ModelName) to get mapped DTO
+
+7. Creating resources
+- _context.Commands.Add(obj); // create resource
+- _context.SaveChanges(); //update data in database
+- Add new Dto
+- Add mapping in profile
+- use 201 and return the resource and URI (Part of the REST specification)
+  -add Name in get by id
+  - return CreatedAtRoute(nameof(GetCommandById), new {Id = commandReadDto.Id}, commandReadDto);
+  - URI is added in response header
+
+
+
+
