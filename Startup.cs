@@ -30,7 +30,7 @@ namespace Commander
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
                 (Configuration.GetConnectionString("CommanderConnection")));
             services.AddControllers();
-            services.AddScoped<ICommanderRepo, MockCommanderRepo>(); //singleton/scoped/transient
+            services.AddScoped<ICommanderRepo, SqlCommanderRepo>(); //singleton/scoped/transient
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

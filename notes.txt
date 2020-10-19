@@ -24,3 +24,10 @@ dotnet ef migrations remove
 *[Key] = primary Key
 *[Required] = not nullable
 *[MaxLength] = maximum length
+
+4. run migrations
+-dotnet ef database update
+
+5. Using SQL
+-return _context.Commands.ToList(); //get all
+-return _context.Commands.FirstOrDefault(p => p.Id == id); //get by Id
