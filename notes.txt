@@ -55,6 +55,25 @@ dotnet ef migrations remove
 - return 204 on success
 - every fields need to be provided
 
+9. PATCH
+- 6 operations (add, remove, replace, copy, move, test)
+- packages required :
+  - Microsoft.AspNetCore.JsonPatch
+  - Microsoft.AspNetCore.Mvc.NewtonsoftJson & setup in startup : 
+    -       services.AddControllers().AddNewtonsoftJson(s => {
+                s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
+- request format :
+  - op = operation
+  - path = attribute
+  - Example:
+    [
+      {
+          "op": "replace",
+          "path": "/howto",
+          "value": "some new value"
+      }
+    ]
 
 
 
