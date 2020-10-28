@@ -75,5 +75,6 @@ dotnet ef migrations remove
       }
     ]
 
+10. DELETE
 
 
