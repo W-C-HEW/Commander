@@ -51,6 +51,10 @@ dotnet ef migrations remove
   - return CreatedAtRoute(nameof(GetCommandById), new {Id = commandReadDto.Id}, commandReadDto);
   - URI is added in response header
 
+8. PUT 
+- return 204 on success
+- every fields need to be provided
+
 
 
 
